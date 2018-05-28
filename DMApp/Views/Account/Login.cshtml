@@ -1,0 +1,18 @@
+﻿@model UserManager.Controllers.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Username) @Html.TextBoxFor(x => x.Username)
+    <br />
+    @Html.LabelFor(x => x.password)@Html.PasswordFor(x => x.password)
+    <br />
+    <input type="submit" value="Login" />
+}
